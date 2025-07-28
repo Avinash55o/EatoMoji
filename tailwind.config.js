@@ -1,5 +1,6 @@
 // tailwind.config.js (or tailwind.config.mjs if preferred)
 export default {
+   darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",

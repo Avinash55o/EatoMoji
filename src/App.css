@@ -3,12 +3,32 @@
 
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+
 
 @theme{
     --font-fredoka: 'Fredoka', sans-serif;
     --font-chewy: 'Chewy', sans-serif;
     --font-comfortaa: 'Comfortaa', cursive;
-}
+    --color-light-primary: #FF8C42;
+    --color-light-accent: #6C63FF;
+    --color-light-button: #6C63FF;
+    --color-light-background: #FFFCF7;
+    --color-light-text: #222222;
+    --color-light-secondary-text: #666666;
+    --color-light-card: #FFFFFF;
+    --color-dark-background: #1E1E2E;
+    --color-dark-text: #FFFFFF;
+    --color-dark-secondary-text: #AAAAAA;
+    --color-dark-card:#2A2A3C;
+    --color-dark-button: #FFD26F;
+    --color-dark-accent: #9A8CFF;
+    --color-dark-primary: #FFB86B
+  
+  }
+
+
 
 body {
   margin: 0;
