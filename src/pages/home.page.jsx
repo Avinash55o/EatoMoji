@@ -1,9 +1,8 @@
 import React from 'react'
 import NavBar from '../components/navBar.component'
-import MoodCard from '../components/moodCard.component'
 export default function Home() {
   return (
-    <div className='min-h-screen w-full'>
+    <div className='min-h-screen w-full dark:bg-dark-background bg-light-background p-4'>
        <NavBar />
     </div>
   )
