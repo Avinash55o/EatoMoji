@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function MoodCard() {
+export default function MoodCard({image}) {
   return (
     <div>
       <p className="mb-16 aspect-ratio-supported:hidden">
@@ -14,7 +14,9 @@ export default function MoodCard() {
           <div className="absolute top-0 left-0 h-full w-full border-4 bg-white z-[-1] transition duration-150 ease-in-out transform -translate-y-[2%] rotate-[-6deg] group-hover:translate-y-[-2%] group-hover:rotate-[-4deg]" />
           <div className="absolute top-0 left-0 h-full w-full border-4 bg-white z-[-1] transition duration-150 ease-in-out transform translate-y-[2%] rotate-[6deg] group-hover:translate-y-[2%] group-hover:rotate-[4deg]" />
 
-          <div className="w-full border-4 bg-[#eee] aspect-square relative" />
+          <div className="w-full border-4 bg-[#eee] aspect-square relative">
+            {image}
+          </div>
         </div>
       </div>
     </div>
