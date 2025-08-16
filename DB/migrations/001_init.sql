@@ -12,18 +12,16 @@ CREATE TABLE IF NOT EXISTS moods(
 
 CREATE TABLE IF NOT EXISTS foods(
   id SERIAL PRIMARY KEY,
-  name TEXT NOT NULL,
+  food_name TEXT NOT NULL,
   category TEXT,
-  calories INT
+  calories INT,
+  food_image TEXT NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS suggestions(
+CREATE TABLE IF NOT EXISTS mood_food_mapping(
   id SERIAL PRIMARY KEY,
-  user_id INT NOT NULL REFERENCES users(id),
   mood_id INT NOT NULL REFERENCES moods(id),
-  food_id INT NOT NULL REFERENCES foods(id),
-  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-  UNIQUE (user_id, mood_id)
+  food_id INT NOT NULL REFERENCES foods(id)
 );
 
 
