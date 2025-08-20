@@ -5,6 +5,6 @@ dotenv.config()
 
 // console.log("DATABASE_URL:", process.env.DATABASE_URL);
 const connectionString = process.env.DATABASE_URL
-const sql = postgres(connectionString)
+const sql = postgres(connectionString,{ssl:"require"})
 console.log("Connected to database")
 export default sql
