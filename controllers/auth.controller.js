@@ -31,7 +31,7 @@ export const signup = async(req, res)=>{
       return res.status(500).json({message:"token generation failed"})
     }
 
-    res.status(201).json({token, message:"signup successfull"})
+    res.status(201).json({token,user:{id:user.id ,email: user.email, name:user.name}, message:"signup successfull"})
 
     } catch (error) {
       console.log('singup error:', error)
@@ -60,7 +60,7 @@ export const signIn= async(req,res)=>{
     if(!correct_pass){
       return res.status(401).json({message:"password is incorrect"})
     }
-    console.log(res.json())
+    
     res.status(200).json({user:{id:user.id ,email: user.email, name:user.name},message:"successfully signin"})
   } catch (error) {
     console.log('signin error:', error)
