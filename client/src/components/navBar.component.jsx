@@ -8,13 +8,15 @@ import {
 } from "@heroicons/react/24/outline";
 import { useContext } from "react";
 import { DarkThemeContext } from "../contextAPI/darkThemeContext";
+import { useNavigate } from "react-router-dom";
 
 function NavIcon(props) {
   const Icon = props.icon;
   const label = props.label;
+  const onClick= props.onClick
 
   return (
-    <div className="group relative cursor-pointer">
+    <div className="group relative cursor-pointer" onClick={onClick}>
       <div className="flex h-10 w-10 items-center justify-center rounded-full hover:text-blue-500 text-light-accent dark:text-dark-accent ">
         <Icon className="w-6 h-6" />
       </div>
@@ -26,7 +28,14 @@ function NavIcon(props) {
 }
 
 function NavBar() {
-  const {isDark, setIsDark} = useContext(DarkThemeContext);
+  const { isDark, setIsDark } = useContext(DarkThemeContext);
+  const navigate = useNavigate();
+
+  //logout handle function
+  const handle_logout= ()=>{
+    localStorage.removeItem("user")
+    navigate("/",{replace:true})
+  };
 
   const toggleDark = () => {
     if (isDark === "dark") {
@@ -39,13 +48,19 @@ function NavBar() {
     <div className="w-full px-4 py-2  dark:bg-transparent">
       <div className="max-w-7xl mx-auto w-full flex items-center justify-between border border-gray-300 dark:border-gray-600 shadow-xl rounded-3xl px-4 py-2">
         {/* Logo */}
-        <p className="font-chewy text-xl md:text-2xl dark:text-dark-primary text-light-primary">ETOMOJI</p>
+        <p className="font-chewy text-xl md:text-2xl dark:text-dark-primary text-light-primary">
+          ETOMOJI
+        </p>
 
         {/* Icons Section */}
         <div className="flex gap-3 md:gap-6 items-center flex-wrap justify-end">
-          <NavIcon icon={HomeIcon} label="Home" />
-          <NavIcon icon={UserIcon} label="User" />
-          <NavIcon icon={ArrowLeftEndOnRectangleIcon} label="Logout" />
+          <NavIcon icon={HomeIcon} label="Home" onClick={() => navigate("/page/home")} />
+          <NavIcon
+            icon={UserIcon}
+            label="User"
+            onClick={() => navigate("/page/profile")}
+          />
+          <NavIcon icon={ArrowLeftEndOnRectangleIcon} label="Logout" onClick={handle_logout} />
           <button onClick={toggleDark}>
             {isDark === "dark" ? (
               <NavIcon icon={MoonIcon} label="dark" />
