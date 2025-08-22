@@ -1,24 +1,41 @@
-import React from "react";
+export default function MoodCard({ emoji, image, label, selected = false }) {
+  const content = image ?? (
+    <span className="text-5xl select-none" aria-hidden>
+      {emoji || "🙂"}
+    </span>
+  );
 
-export default function MoodCard({image}) {
   return (
-    <div>
-      <p className="mb-16 aspect-ratio-supported:hidden">
-        If this looks wonky to you it's because this browser doesn't support the CSS
-        property 'aspect-ratio'.
-      </p>
+    <div
+      className={`relative w-[180px] h-[220px] cursor-pointer transition-transform duration-300 hover:-translate-y-1 ${
+        selected ? "scale-[1.02]" : ""
+      }`}
+    >
+      {/* Gradient frame */}
+      <div className="absolute inset-0 rounded-[1.2em] bg-[linear-gradient(135deg,var(--color-light-primary),var(--color-light-accent))] dark:bg-[linear-gradient(135deg,var(--color-dark-primary),var(--color-dark-accent))]" />
+      {/* Soft glow */}
+      <div className="absolute inset-0 rounded-[1.2em] blur-[30px] opacity-60 bg-[linear-gradient(135deg,var(--color-light-primary),var(--color-light-accent))] dark:bg-[linear-gradient(135deg,var(--color-dark-primary),var(--color-dark-accent))]" />
+      {/* Inner card */}
+      <div
+        className={`absolute inset-[6px] rounded-[1em] bg-light-card dark:bg-dark-card ${
+          selected
+            ? "ring-2 ring-[var(--color-light-primary)] dark:ring-[var(--color-dark-primary)]"
+            : ""
+        }`}
+      >
+        {/* Subtle highlight */}
+        <div className="absolute top-0 left-0 w-1/2 h-full rounded-l-[1em] bg-white/5" />
+      </div>
 
-      <div className="w-[55%] max-w-[400px] transition ease-in-out duration-200 hover:rotate-[5deg] relative group">
-        <div className="relative border-4 bg-white aspect-[3/2] cursor-pointer p-[5%_5%_15%_5%] transition duration-150 ease-in-out">
-          {/* Pseudo-elements recreated as elements */}
-          <div className="absolute top-0 left-0 h-full w-full border-4 bg-white z-[-1] transition duration-150 ease-in-out transform -translate-y-[2%] rotate-[-6deg] group-hover:translate-y-[-2%] group-hover:rotate-[-4deg]" />
-          <div className="absolute top-0 left-0 h-full w-full border-4 bg-white z-[-1] transition duration-150 ease-in-out transform translate-y-[2%] rotate-[6deg] group-hover:translate-y-[2%] group-hover:rotate-[4deg]" />
-
-          <div className="w-full border-4 bg-[#eee] aspect-square relative">
-            {image}
-          </div>
-        </div>
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center w-full h-full">
+        {content}
+        {label && (
+          <span className="mt-2 text-sm text-light-accent dark:text-dark-accent">
+            {label}
+          </span>
+        )}
       </div>
     </div>
-  )
+  );
 }
