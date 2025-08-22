@@ -47,7 +47,7 @@ function Signup() {
     <div className="flex items-center justify-center h-screen dark:bg-dark-background bg-light-background">
 
 {msg && (
-        <div className="mb-4">
+        <div className="absolute top-6 left-1/2 transform -translate-x-1/2">
           <MessageCard
             title={msg}
             subtitle={"Everything seems great"}

@@ -44,15 +44,15 @@ function Signin() {
 
   return (
     <div className="flex items-center justify-center h-screen dark:bg-dark-background bg-light-background">
-      {msg && (
-        <div className="mb-4">
-          <MessageCard
-            title={msg}
-            subtitle={"Everything seems great"}
-            type="success"
-          />
-        </div>
-      )}
+     {msg && (
+    <div className="absolute top-6 left-1/2 transform -translate-x-1/2">
+      <MessageCard
+        title={msg}
+        subtitle={"Everything seems great"}
+        type="success"
+      />
+    </div>
+  )}
 
       <div className="max-w-[450px] max-h-[950px] bg-gradient-to-t from-white to-[#f4f7fb] rounded-[40px] p-[25px_35px] border-[5px] border-white shadow-[0_30px_30px_-20px_#FFB86B] dark:shadow-[0_30px_30px_-20px_#9A8CFF] m-5">
         <div className="text-center font-black text-[30px] dark:text-dark-accent text-light-primary">
