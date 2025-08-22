@@ -1,0 +1,29 @@
+CREATE TABLE IF NOT EXISTS users(
+  id SERIAL PRIMARY KEY,
+  name VARCHAR NOT NULL,
+  email VARCHAR UNIQUE NOT NULL,
+  password_hash VARCHAR NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS moods(
+  id SERIAL PRIMARY KEY,
+  mood_name TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS foods(
+  id SERIAL PRIMARY KEY,
+  food_name TEXT NOT NULL,
+  category TEXT,
+  calories INT,
+  food_image TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS mood_food_mapping(
+  id SERIAL PRIMARY KEY,
+  mood_id INT NOT NULL REFERENCES moods(id),
+  food_id INT NOT NULL REFERENCES foods(id)
+);
+
+
+  
