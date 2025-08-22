@@ -1,3 +1,5 @@
+import sql from "../DB/index.js";
+
 export default async function userProfile(res,req){
   const {user} =req.session
   if(!user){

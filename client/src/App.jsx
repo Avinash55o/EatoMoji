@@ -1,12 +1,12 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import Landing from "./pages/landing.page";
-import Home from "./pages/home.page";
-import Signin from "./pages/signin.page";
-import Signup from "./pages/signup.page";
-import ProfilePage from "./pages/profile.page";
+import Landing from "./pages/landing.page.jsx";
+import Home from "./pages/home.page.jsx";
+import Signin from "./pages/signin.page.jsx";
+import Signup from "./pages/signup.page.jsx";
+import ProfilePage from "./pages/profile.page.jsx";
 
-import { DarkThemeContext } from "./contextAPI/darkThemeContext";
+import { DarkThemeContext } from "./contextAPI/darkThemeContext.js";
 import { useState } from "react";
 
 function App() {
