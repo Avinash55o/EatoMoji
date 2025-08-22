@@ -1,4 +1,4 @@
-import sql from "../../EatoMoji/DB/index.js";
+import sql from "../DB/index.js";
 // get request dont required the req.body cause they don't have a body.
 export const listFood= async (req, res)=>{
   try {

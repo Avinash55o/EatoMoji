@@ -27,6 +27,6 @@ export const foodSuggestion = async (req, res) => {
     return res.status(200).json({message:"all the suggested foods",food_suggestion})
     
   } catch (error) {
-    return res.status(400).json({error,message:"something went rong"})
+    return res.status(400).json({error,message:"something went wrong"})
   }
 };

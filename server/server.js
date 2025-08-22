@@ -2,7 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import router from './api/index.js';
 import cors from 'cors'
-import '../EatoMoji/DB/index.js';
+import './DB/index.js';
 dotenv.config();
 const app=express();
 
