@@ -6,7 +6,13 @@ A delightful web application that suggests food based on your current mood. Buil
 ![Node.js](https://img.shields.io/badge/Node.js-Express-green?logo=node.js)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue?logo=postgresql)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?logo=tailwind-css)
+## images
+<div align="center">
+   <img width="700" height="600" alt="Screenshot from 2025-08-23 00-08-24" src="https://github.com/user-attachments/assets/73fe9240-9cf5-4c64-945d-b23faefb3472" />
 
+<img  width="700" height="600" alt="Screenshot from 2025-08-23 00-08-05" src="https://github.com/user-attachments/assets/7905b96e-2c51-4ff4-93b0-bec594a03df8" />
+</div>
+---
 ## ✨ Features
 
 - **Mood-Based Food Suggestions**: Select your mood and get personalized food recommendations
@@ -18,7 +24,10 @@ A delightful web application that suggests food based on your current mood. Buil
 
 ## 🚀 Live Demo
 
-[View Live Demo](https://your-vercel-deployment-url.vercel.app)
+[View Live Demo](https://eato-moji-avinash55os-projects.vercel.app/)
+
+---
+
 
 ## 🛠️ Tech Stack
 
@@ -56,8 +65,8 @@ A delightful web application that suggests food based on your current mood. Buil
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/mood_food.git
-   cd mood_food
+   git clone https://github.com/Avinash55o/EatoMoji.git
+   cd EatoMOji
    ```
 
 2. **Install dependencies**
@@ -75,14 +84,14 @@ A delightful web application that suggests food based on your current mood. Buil
 
    Create `.env` file in the `server` directory:
    ```env
-   PORT=3000
-   DATABASE_URL=postgresql://username:password@localhost:5432/mood_food_db
+   PORT=4000
+   DATABASE_URL=supabase url
    JWT_SECRET=your-super-secret-jwt-key-here
    ```
 
    Create `.env` file in the `client` directory:
    ```env
-   VITE_API_URL=http://localhost:3000
+   VITE_API_URL=http://localhost:4000
    ```
 
 4. **Set up the database**
@@ -103,7 +112,7 @@ A delightful web application that suggests food based on your current mood. Buil
 
 6. **Open your browser**
    - Frontend: http://localhost:5173
-   - Backend API: http://localhost:3000
+   - Backend API: http://localhost:4000
 
 ## ��️ Database Schema
 
@@ -144,7 +153,6 @@ The application uses the following database tables:
 - Responsive design for all devices
 - Dark/light theme toggle
 
-## 🚀 Deployment
 
 ### Frontend (Vercel)
 The frontend is configured for Vercel deployment with client-side routing support.
@@ -159,10 +167,6 @@ The backend  is on Render
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-
-
-
 ---
 
 Made with ❤️ by Avinash Boruah
