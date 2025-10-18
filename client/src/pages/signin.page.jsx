@@ -84,9 +84,6 @@ function Signin() {
             className="w-full bg-white border-none py-[15px] px-[20px] rounded-[20px] mt-[15px] shadow-[0_10px_10px_-5px_#FFB86B] dark:shadow-[0_10px_10px_-5px_#9A8CFF] placeholder:text-[#aaa] focus:outline-none focus:border-x-2 focus:border-x-[#12B1D1]"
           />
 
-          <span className="block mt-[10px] ml-[10px] text-[11px] text-[#0099ff]">
-            <a href="#">Forgot Password ?</a>
-          </span>
 
           <button
             type="submit"
@@ -97,11 +94,7 @@ function Signin() {
           </button>
         </form>
 
-        <span className="block text-center mt-[15px] text-[9px]">
-          <a href="#" className="text-[#0099ff]">
-            Learn user licence agreement
-          </a>
-        </span>
+        
       </div>
     </div>
   );

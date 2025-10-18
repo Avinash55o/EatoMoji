@@ -113,15 +113,11 @@ function Signup() {
         <div className="mt-[25px]">
           <span className="block text-center text-[10px] text-dark-secondary-text">
             {" "}
-            <a href="/page/signin">Or Sign up with</a>
+            <a href="/page/signin">Or Sign in with your account</a>
           </span>
         </div>
 
-        <span className="block text-center mt-[15px] text-[9px]">
-          <a href="#" className="text-dark-accent">
-            Learn user licence agreement
-          </a>
-        </span>
+        
       </div>
     </div>
   );

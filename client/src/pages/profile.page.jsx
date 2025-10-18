@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import NavBar from '../components/navBar.component'
-import MessageCard from '../components/messageCard.components'
 import {
   UserIcon,
   EnvelopeIcon,
